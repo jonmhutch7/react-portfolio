@@ -12,6 +12,9 @@ class Item extends Component {
 
 const Container = styled.div`
 	margin: 0 0 45px;
+  @media screen and (max-width: 768px) {
+    margin: 0 0 35px;
+  }
 	${p => p.flex && `
 		display: flex;
 		flex-wrap: nowrap;

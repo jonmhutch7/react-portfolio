@@ -43,23 +43,44 @@ class Header extends Component {
 }
 
 const Container = styled.div`
-	padding: 20px;
-	margin-bottom: 20px;
+  padding: 0 20px;
+  margin-bottom: 20px;
 `
 const Title = styled.h1`
 	display: inline-block;
 	font-size: 20px;
+  color: #71210c;
 	text-shadow: 2px 0 0 #fc4a1a, 4px 0 0 #f7b733;
+  margin: 25px 0 21px;
+  line-height: 1;
+  @media screen and (max-width: 620px) {
+    display: block;
+    margin: 30px auto 20px;
+    text-align: center;
+  }
 `
 const IconsContainer = styled.div`
 	float: right;
+  margin-top: 10px;
+  @media screen and (max-width: 620px) {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  > a:first-child {
+    margin-left: 0;
+  }
 `
 const Icon = styled.a`
 	margin-left: 20px;
 	padding: 10px 10px 3px;
 	display: inline-block;
+  &:hover svg {
+    fill: #fc4a1a;
+  }
 	> svg {
 		fill: #ccc;
+    transition: fill 0.2s ease;
 	}
 `
 

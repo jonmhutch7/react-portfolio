@@ -72,6 +72,9 @@ const ColumnContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
   align-items: stretch;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
   > div:last-child {
     border-right: none;
   }

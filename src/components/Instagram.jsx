@@ -33,7 +33,7 @@ class Instagram extends Component {
     let parser = new Parser();
     const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
     parser.parseURL(CORS_PROXY + 'https://queryfeed.net/instagram?q=jonmhutch', (err, feed) => {
-      this.setState({instagramImages: feed.items.slice(0,9)})
+      if (feed && feed.items) this.setState({instagramImages: feed.items.slice(0,6)})
     })
   }
 }
