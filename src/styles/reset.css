@@ -55,6 +55,7 @@ h1 {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: .45em;
+  color: #71210c;
 }
 
 h2 {
@@ -62,6 +63,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: .45em;
   margin-bottom: 10px;
+  color: #71210c;
 }
 
 h3 {

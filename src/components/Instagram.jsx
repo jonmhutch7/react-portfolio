@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import Parser from 'rss-parser'
+import 'rss-parser/dist/rss-parser.min.js';
+
 class Instagram extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +31,7 @@ class Instagram extends Component {
     this._getInstagramFeed();
   }
   _getInstagramFeed() {
-    let parser = new Parser();
+    let parser = new RSSParser();
     const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
     parser.parseURL(CORS_PROXY + 'https://queryfeed.net/instagram?q=jonmhutch', (err, feed) => {
       if (feed && feed.items) this.setState({instagramImages: feed.items.slice(0,6)})
