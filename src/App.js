@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Header from './components/Header'
 import Item from './components/Item'
 import Instagram from './components/Instagram'
+import 'rss-parser/dist/rss-parser.min.js';
 
 
 class App extends Component {

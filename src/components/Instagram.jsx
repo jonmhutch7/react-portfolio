@@ -31,11 +31,13 @@ class Instagram extends Component {
     this._getInstagramFeed();
   }
   _getInstagramFeed() {
-    let parser = new RSSParser();
-    const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-    parser.parseURL(CORS_PROXY + 'https://queryfeed.net/instagram?q=jonmhutch', (err, feed) => {
-      if (feed && feed.items) this.setState({instagramImages: feed.items.slice(0,6)})
-    })
+    let parser = window ? new window.RSSParser() : null;
+    if (parser) {
+      const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+      parser.parseURL(CORS_PROXY + 'https://queryfeed.net/instagram?q=jonmhutch', (err, feed) => {
+        if (feed && feed.items) this.setState({instagramImages: feed.items.slice(0,6)})
+      })
+    }
   }
 }
 
