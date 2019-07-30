@@ -17,7 +17,14 @@ class App extends Component {
             <Item>
               <h2>Experience</h2>
               <Item border>
-                <Date>June 2016 - <b>Present</b></Date>
+                <Date>January 2019 - July 2019</Date>
+                <h3>Spreetail</h3>
+                <p>Served as a Senior Front End Developer, where I implemented a CMS using Strapi for our home page content, our blog and marketing content throughout the site.</p>
+                <p>Helped convert code base from SCSS to Styled Components. Headed up image optimization site wide with the help of Imgix.</p>
+                <p>Gained a firm grasp on code testing with Jest, Enzyme, Selenium and Nightwatch.</p>
+              </Item>
+              <Item border>
+                <Date>June 2016 - December 2018</Date>
                 <h3>Tastemade</h3>
                 <p>Feature development and maintenance for <a href="https://www.tastemade.com/">Tastemade.com</a> with a small team of developers and a designer. Primarily working with a React, Webpack, Node stack.</p>
                 <p>Creation and front end development for <a href="https://shop.tastemade.com/">shop.tastemade.com</a> in Shopify using Liquid and Javascript.</p>
@@ -47,15 +54,19 @@ class App extends Component {
             <Item border>
               <h2>Skills</h2>
               <h3>Web Development</h3>
-              <p>HTML5, CSS3, ES6 Javascript, React 16, Node, styled components, webpack, babel, superagent, react-intl, express, react-router, Gulp, Grunt, NPM</p>
+              <p>HTML5, CSS3, ES6 Javascript, React 16, Redux, Redux Saga, Node, Styled Components, Jest, Enzyme, Selenium, Nightwatch, webpack, babel, axios, react-intl, express, NPM</p>
               <h3>Analytics</h3>
-              <p>Google Analytics, AWS/Looker, Amplitude, GTM, Dynamic Yield</p>
+              <p>Google Analytics, AWS, Looker, Amplitude, GTM, Dynamic Yield</p>
               <h3>Other</h3>
               <p>Handlebars, PHP, BrightScript, XML, AWS Lambda</p>
             </Item>
             <Item border>
               <h2>Interests</h2>
-              <p>Responsive web development, data science and visualization, user experience design and testing, web animations, interactive media and its various web implementations</p>
+              <p>Responsive web development, data science and visualization, web accessibility, user experience design, web animations, interactive media and its various web implementations</p>
+            </Item>
+            <Item border>
+              <h2>What I'm Learning Next</h2>
+              <p>Typescript, GraphQL, React Native</p>
             </Item>
             <Item>
               <h2>Outside of Work</h2> 

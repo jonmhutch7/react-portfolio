@@ -10,21 +10,21 @@ class Instagram extends Component {
   }
   render() {
     return (
-      <InstagramContainer show={this.state.instagramImages.length > 0}>
+      <div>
         <ImageList>
           {
             this.state.instagramImages.map((item, i) => {
               return (
-                <ImageLine key={i}>
+                <li key={i}>
                   <ImageLink href={item.link} target="_blank">
                     <Image src={item.enclosure.url} alt={"Instagram" + i} />
                   </ImageLink>
-                </ImageLine>
+                </li>
               )
             }
           )}
         </ImageList>
-      </InstagramContainer>
+      </div>
     )
   }
   componentDidMount() {
@@ -41,28 +41,23 @@ class Instagram extends Component {
   }
 }
 
-const InstagramContainer = styled.div`
-  opacity: ${p => p.show ? '1' : '0'};
-  transition: opacity 0.2s ease;
-`
 const ImageList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  grid-gap: 3% 2%;
   list-style: none;
   margin: 0;
   padding: 0;
-`
-const ImageLine = styled.li`
-  flex-grow: 1;
-  flex-basis: 33%;
-  flex-shrink: 1;
 `
 const ImageLink = styled.a`
   opacity: 0.7;
   transition: opacity 0.2s ease;
   cursor: pointer;
+  display: block;
+  padding-bottom: 100%;
+  position: relative;
   &:hover {
-    opacity: 1
+    opacity: 1;
     img {
       -webkit-filter: none;
       filter: none;
@@ -70,11 +65,14 @@ const ImageLink = styled.a`
   }
 `
 const Image = styled.img`
-  width: 100%;
-  padding: 5px;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
   transition: filter 0.2s ease;
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 `
 
 export default Instagram

@@ -50,7 +50,7 @@ const Title = styled.h1`
 	display: inline-block;
 	font-size: 20px;
   color: #71210c;
-	text-shadow: 2px 0 0 #fc4a1a, 4px 0 0 #f7b733;
+	text-shadow: 2px 0 0 rgba(252, 74, 26, 0.5), 4px 0 0 rgba(247, 183, 51, 0.5);
   margin: 25px 0 21px;
   line-height: 1;
   @media screen and (max-width: 620px) {
