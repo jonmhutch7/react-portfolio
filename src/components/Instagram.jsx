@@ -43,8 +43,8 @@ class Instagram extends Component {
 
 const ImageList = styled.ul`
   display: grid;
-  grid-template-columns: 31% 31% 31%;
-  grid-gap: 3% 2%;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 15px;
   list-style: none;
   margin: 0;
   padding: 0;
