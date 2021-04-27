@@ -22,14 +22,15 @@ const App = () => {
             <div>
               <Date>August 2019 - Present</Date>
               <h3>Leafly - Senior Software Engineer</h3>
-              <p>Responsible for the content portions of the website including <code>/news</code> pages, the home page and several aspects of the strain finding experience. I reduced complexity and old code in Leafly's long neglected Wordpress instance while using React to take advantage of the powerful Gutenberg editor. I also implemented a new CMS for content outside of our <code>/news</code> pages using Directus. Currently, I'm leading the project to transition to Headless Wordpress.</p>
-              <p>Performance and accessibility improvements site wide have been a major focus of mine during my tenure. I implemented and standardized image usage with a custom image component built around Imgix, resulting in a vast improvement in Core Web Vitals scores. I reduced bundle sizes by as much as 48% on various parts of the site, helped move Leafly to WCAG2AA compliance by burning down accessibility errors and harnessed the power of external libraries to help reduce page load times, page load sizes and time to interactive on home and strain pages.</p>
+              <p>Lead Engineer for content on leaflymarket.com and leafly.com. Includes news, learn and glossary hubs using Wordpress as well marketing content site wide using Directus. Accomplishments include revitalizing and refactoring long neglected Wordpress codebase, implementing React.js blocks within Gutenberg editor, defining architecture for Directus integration, working with writers and designers to create new content hubs and features. Currently leading the effort to transition Wordpress to headless mode.</p>
+              <p>Frontend guild leader responsible for running monthly meetings and as advocate between design and engineering teams. Lead multiple efforts to help design align with engineering in process, style guide and component library.</p>
+              <p>Doubled lighthouse and core web vitals scores on home, strain and news pages (~60% of total site traffic) by creating a custom image component with imgix, reducing bundle sizes by nearly 50% and refactoring pages to optimize load times.</p>
             </div>
             <div>
               <Date>January 2019 - July 2019</Date>
               <h3>Spreetail - Senior Front End Engineer</h3>
-              <p>I helped implemented a CMS using Strapi for our home page content, our blog and marketing content throughout the site.</p>
-              <p>Helped convert code base from SCSS to Styled Components. Headed up image optimization site wide with the help of Imgix.</p>
+              <p>I implemented a CMS using Strapi for our home page content, our blog and marketing content throughout the site.</p>
+              <p>I converted code base from SCSS to Styled Component and implemented image optimization site wide with the help of Imgix.</p>
               <p>Gained a firm grasp on code testing with Jest, Enzyme, Selenium and Nightwatch.</p>
             </div>
             <div>
