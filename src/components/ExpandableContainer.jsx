@@ -42,7 +42,6 @@ const ExpandableTextContainer = ({ children, initialHeight = 350, moreText, less
 const ExpandableContainerWrapper = styled.div`
 	position: relative;
 `;
-
 const ExpandableContainer = styled.div`
 	overflow-y: hidden;
 	transition: max-height 0.3s ease;
@@ -51,7 +50,6 @@ const ExpandableContainer = styled.div`
 		margin-bottom: 30px;
 	}
 `
-
 const Button = styled.button`
 	position: absolute;
 	cursor: pointer;
