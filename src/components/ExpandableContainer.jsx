@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from 'styled-components';
 
-const ExpandableTextContainer = ({ children, initialHeight = 300, moreText, lessText, ariaLabel }) => {
+const ExpandableTextContainer = ({ children, initialHeight = 350, moreText, lessText, ariaLabel }) => {
   const [expandedContent, setExpandedContent] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const containerRef = useRef(null);

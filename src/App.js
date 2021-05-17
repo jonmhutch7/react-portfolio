@@ -31,7 +31,7 @@ const App = () => {
             moreText="go on..." 
             lessText="whoa nevermind, tl;dr" 
             ariaLabel="Show more of the 'about me' text"
-            initialHeight={300}
+            initialHeight={350}
           >
             <p>After graduating from Ohio University with a bachelors degree in Visual Communication, I’ve spent my 10 year career in Austin, Texas working for a handful of tech companies. Through the time I’ve spent at each company, I’ve encountered a variety of technologies, methodologies and colleagues who have helped educate and shape me into the developer I am today.</p>
             <p>My main interest is in the front end, the visual part of any app, as I gravitate more towards what I can see and interact with in my day to day life. Seeing an app or website come to life as I code motivates me and I feed off of the enjoyment the products I develop bring to end users. I strongly believe in clean, tightly written, documented and tested code. I also believe in the ecosystem in which a product is developed; the project and product managers, designers and QA engineers as well as the developers are integral in the success of any product.</p>
