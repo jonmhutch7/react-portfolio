@@ -40,6 +40,8 @@ const Container = styled.div`
   flex
   justify-content: center;
   align-items: center;
+  max-width: 100%;
+  overflow: hidden;
 `;
 const ScrollButton = styled.button`
     position: absolute;

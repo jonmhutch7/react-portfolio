@@ -22,7 +22,7 @@ const App = () => {
     <main>
       <Header setActiveSection={setActiveSection} />
       <FullHeightFlexContainer sectionIndex={1} id="intro">
-        <IntroParagraph isLoaded={isLoaded}>I'm a full stack developer, front-end leaning, who takes pride in <Soap>🧼</Soap>clean<Soap>🧼</Soap>, performant code and <Bolt>⚡️</Bolt>lightning-fast<Bolt>⚡️</Bolt>, beautifully designed UX.</IntroParagraph>
+        <IntroParagraph isLoaded={isLoaded}>I'm an experienced Frontend Developer who takes pride in <Soap>🧼</Soap>clean<Soap>🧼</Soap>, performant code and <Bolt>⚡️</Bolt>lightning-fast<Bolt>⚡️</Bolt> UI.</IntroParagraph>
       </FullHeightFlexContainer>
       <FullHeightFlexContainer sectionIndex={2} id="about-me">
         <MaxWidthContainer>
