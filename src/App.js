@@ -5,138 +5,52 @@ import FullHeightFlexContainer from './components/FullHeightFlexContainer'
 import ExpandableTextContainer from './components/ExpandableContainer';
 
 const App = () => {
-  const setActiveSection = (e) => {
-    const selection = e.currentTarget.value;
-    
-    setActive(selection);
-  }
-
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setIsLoaded(true);
     }, 200)
-  }, [])
+  }, []);
+
+  const year = new Date().getFullYear() - 2012;
 
   return (
     <main>
-      <Header setActiveSection={setActiveSection} />
+      <Header />
       <FullHeightFlexContainer sectionIndex={1} id="intro">
         <IntroParagraph isLoaded={isLoaded}>I'm an experienced Frontend Developer who takes pride in <Soap>🧼</Soap>clean<Soap>🧼</Soap>, performant code and <Bolt>⚡️</Bolt>lightning-fast<Bolt>⚡️</Bolt> UI.</IntroParagraph>
       </FullHeightFlexContainer>
       <FullHeightFlexContainer sectionIndex={2} id="about-me">
         <MaxWidthContainer>
           <h2>a little more about me</h2>
-          <ExpandableTextContainer 
-            moreText="go on..." 
-            lessText="whoa nevermind, tl;dr" 
+          <ExpandableTextContainer
+            moreText="go on..."
+            lessText="whoa nevermind, tl;dr"
             ariaLabel="Show more of the 'about me' text"
             initialHeight={350}
           >
-            <p>After graduating from Ohio University with a bachelors degree in Visual Communication, I’ve spent my 10 year career in Austin, Texas working for a handful of tech companies. Through the time I’ve spent at each company, I’ve encountered a variety of technologies, methodologies and colleagues who have helped educate and shape me into the developer I am today.</p>
-            <p>My main interest is in the front end, the visual part of any app, as I gravitate more towards what I can see and interact with in my day to day life. Seeing an app or website come to life as I code motivates me and I feed off of the enjoyment the products I develop bring to end users. I strongly believe in clean, tightly written, documented and tested code. I also believe in the ecosystem in which a product is developed; the project and product managers, designers and QA engineers as well as the developers are integral in the success of any product.</p>
-            <p>I also enjoy modernizing code bases and refactoring for performance improvements. It is immensely satisfying to untangle old code and put it back together in a consistent, readable way with a lower learning curve for developers, in a more efficient development environment. At every job I've worked at, I've encountered long ignored code bases, still actively developed in, that slow developers to a crawl and invite slow code and sometimes security issues to run rampant. Its why I consistently stress to colleagues that an up to date codebase is an efficient codebase and often times a more performant codebase.</p>
+            <p>After graduating from Ohio University with a bachelors degree in Visual Communication, I’ve spent my {year} year career in Austin, Texas working for a handful of tech companies. Throughout the time I’ve spent at each company, I’ve encountered a variety of technologies, methodologies and colleagues who have helped educate and shape me into the developer I am today.</p>
+            <p>My main interest is in the frontend, the visual part of any app, as I gravitate more towards what I can see and interact with in my day to day life. Seeing an app or website come to life as I code motivates me and I feed off of the enjoyment the products I develop bring to end users. I strongly believe in clean, tightly written, documented and tested code. I also believe in the ecosystem in which a product is developed; the project and product managers, designers and QA engineers as well as the developers are integral in the success of any product.</p>
+            <p>I also enjoy modernizing code bases and optimizing for performance improvements. It is immensely satisfying to untangle old code and put it back together in a consistent, readable way with a lower learning curve for developers, in a more efficient development environment. At every job I've worked at, I've encountered long ignored code bases, still actively developed in, that slow developers to a crawl and invite poorly performing code and sometimes security issues to run rampant. Its why I consistently stress to colleagues that an up to date codebase is an efficient and more performant codebase.</p>
           </ExpandableTextContainer>
         </MaxWidthContainer>
       </FullHeightFlexContainer>
-      <FullHeightFlexContainer sectionIndex={3} id="current-job">
-        <MaxWidthContainer>
-          <h2>what I'm currently up to</h2>
-          <ExpandableTextContainer 
-            moreText="tell me more" 
-            lessText="impressive!" 
-            ariaLabel="Show more of the 'current job' text"
-          >
-            <LogoTitle>
-              <CompanyLogo src={process.env.PUBLIC_URL + '/logos/leafly.png'} alt="Leafly" />
-              <div>
-                <h3>Senior Front End Engineer</h3>
-                <Date>August 2019 - Present</Date>
-              </div>
-            </LogoTitle>
-            <p>Lead Engineer for content on leaflymarket.com and leafly.com. Includes news, learn and glossary hubs using Wordpress as well marketing content site wide using Directus. Accomplishments include revitalizing and refactoring long neglected Wordpress codebase, implementing React.js blocks within Gutenberg editor, defining architecture for Directus integration, working with writers and designers to create new content hubs and features. Currently leading the effort to transition Wordpress to headless mode.</p>
-            <p>Frontend guild leader responsible for running monthly meetings and as advocate between design and engineering teams. Lead multiple efforts to help design align with engineering in process, style guide and component library.</p>
-            <p>Doubled lighthouse and core web vitals scores on home, strain and news pages (~60% of total site traffic) by creating a custom image component with imgix, reducing bundle sizes by nearly 50% and refactoring pages to optimize load times.</p>
-          </ExpandableTextContainer>
-        </MaxWidthContainer>
-      </FullHeightFlexContainer>
-      <FullHeightFlexContainer sectionIndex={4} id="previous-job-experience">
-        <MaxWidthContainer>
-          <h2>before Leafly, I worked at</h2>
-          <ExpandableTextContainer
-            moreText="there's more?!" 
-            lessText="great experience!" 
-            ariaLabel="toggle visibility of 'previous jobs' text"
-          >
-            <List>
-              <ListItem>
-                <LogoTitle>
-                  <CompanyLogo src={process.env.PUBLIC_URL + '/logos/spreetail.png'} alt="Spreetail" />
-                  <div>
-                    <h3>Senior Front End Engineer</h3>
-                    <Date>January 2019 - July 2019</Date>
-                  </div>
-                </LogoTitle>
-                <p>I implemented a CMS using Strapi for our home page content, our blog and marketing content throughout the site.</p>
-                <p>I converted code base from SCSS to Styled Component and implemented image optimization site wide with the help of Imgix.</p>
-                <p>Gained a firm grasp on code testing with Jest, Enzyme, Selenium and Nightwatch.</p>
-              </ListItem>
-              <ListItem>
-                <LogoTitle>
-                  <CompanyLogo src={process.env.PUBLIC_URL + '/logos/tastemade.png'} alt="Tastemade" />
-                  <div>
-                    <h3>Front End Engineer</h3>
-                    <Date>June 2016 - December 2018</Date>
-                  </div>
-                </LogoTitle>
-                <p>Feature development and maintenance for <a href="https://www.tastemade.com/">Tastemade.com</a> with a small team of developers and a designer. Primarily working with a React, Webpack, Node stack.</p>
-                <p>Creation and front end development for <a href="https://shop.tastemade.com/">shop.tastemade.com</a> in Shopify using Liquid and Javascript.</p>
-                <p>Featured development and maintenance for Tastemade's Roku and Apple TV 3 applications using Brightscript, Javascript, XML and AWS Lambdas.</p>
-              </ListItem>
-              <ListItem>
-              <LogoTitle>
-                  <CompanyLogo src={process.env.PUBLIC_URL + '/logos/gpo.svg'} alt="GPO, Inc." />
-                  <div>
-                    <h3>Front End Engineer</h3>
-                    <Date>September 2015 - June 2016</Date>
-                  </div>
-                </LogoTitle>
-                <p>
-                  Worked on a small team of developers, copywriters, designers and SEO specialists to produce ultra-performant SEO location pages for companies like Domino's, Maggianos, Check N' Go and Bridgestone. Each microsite used a Node, Handlebars and PostCSS stack.
-                </p>
-              </ListItem>
-              <ListItem>
-                <LogoTitle>
-                  <CompanyLogo src={process.env.PUBLIC_URL + '/logos/mm.png'} alt="Mutual Mobile" />
-                  <div>
-                    <h3>Front End Engineer</h3>
-                    <Date>Jul 2012 – Aug 2015</Date>
-                  </div>
-                </LogoTitle>
-                <p>
-                  Developed feature-rich web applications and responsive websites for some of Americas top companies. I transitioned to the marketing department to serve as the marketing engineer where my daily tasks included administering and maintaining Marketo and Salesforce and creating prototypes or new tools such as an app review aggregator that added value for clients and/or drove new business.
-                </p>
-              </ListItem>
-            </List>
-          </ExpandableTextContainer>
-        </MaxWidthContainer>
-      </FullHeightFlexContainer>
-      <FullHeightFlexContainer sectionIndex={5} displayScrollButton={false} displayBackToTop={true} id="skills">
+      <FullHeightFlexContainer sectionIndex={3} id="skills">
         <MaxWidthContainer>
           <h2>What I know</h2>
           <Table>
             <Row>
               <Column>
                 <h3>Languages</h3>
-                <p>HTML, CSS, Javascript, Typscript, PHP</p>
+                <p>Typscript, Javascript, HTML, CSS</p>
               </Column>
               <Column>
                 <h3>Frameworks</h3>
-                <p>React, Next.js, Redux, Tailwind, Styled Components, Node.js, Jest, Wordpress</p>
+                <p>React.js, Next.js, Redux, Tailwind CSS, Styled Components, Node.js, Jest, Wordpress, GraphQL</p>
               </Column>
               <Column>
                 <h3>Tools</h3>
-                <p>Git, Storybook, Yarn, Jest Axe, Pa11y, Nightwatch, Google Analytics, Split.io, Looker, Amplitude, Google Tag Manager, Datadog, Rollbar, Calibre</p>
+                <p>Git, Storybook, Yarn, NPM, Jest Axe, Pa11y, Google Analytics, Split.io, Google Tag Manager, Datadog, Rollbar, Calibre</p>
               </Column>
               <Column>
                 <h3>Concepts</h3>
@@ -144,6 +58,80 @@ const App = () => {
               </Column>
             </Row>
           </Table>
+        </MaxWidthContainer>
+      </FullHeightFlexContainer>
+      <FullHeightFlexContainer sectionIndex={4} id="current-job">
+        <MaxWidthContainer>
+          <h2>what I'm currently up to</h2>
+          <ExpandableTextContainer
+            moreText="tell me more"
+            lessText="impressive!"
+            ariaLabel="Show more of the 'current job' text"
+          >
+            <LogoTitle>
+              <CompanyLogo src={process.env.PUBLIC_URL + '/logos/leafly.png'} alt="Leafly" />
+              <div>
+                <h3>Senior Frontend Engineer</h3>
+                <DateSpan>August 2019 - Present</DateSpan>
+              </div>
+            </LogoTitle>
+            <p>My primary focus at Leafly has been optimization of consumer facing products, whether that be performance optimization, code optimization, or optimization of features to provide users with the best possible experience for discovering and legally purchasing cannabis.</p>
+            <p>As a subject matter expert for web performance, I helped the engineering org define and maintain performance metrics. On multiple occasions I was tasked with improving the Core Web Vitals (CWV) metrics in multiple areas of the site. I doubled lighthouse and CWV scores on the home, strain and news pages (~60% of total site traffic) by creating a custom image component built to harness the powers of Imgix, reducing bundle sizes by nearly 50% by reverse engineering areas of our code base and refactoring pages to optimize load times with Next.js dynamic components.</p>
+            <p>I oversaw the migration of three separate projects where we converted javascript to typescript, removed legacy code and optimized the migrated pages for the most recent React.js and Next.js builds. One migration was a complete rebuild of a Wordpress-hosted part of the site, which involved converting our Wordpress install to headless mode, rewriting all PHP templates in typescript and optimizing the Wordpress REST API wider use.</p>
+            <p>I’ve also led the implementation of several consumer-facing features. They include setting up and using Directus CMS to enable marketing and SEO to quickly update sections of the site, a completely customizable home page using Directs CMS, a comparison shopping component that allows users to quickly see the closest and cheapest ways to purchase cannabis, a strain quiz component that helps users find the strain of cannabis that most fits their needs, and several React components for the Gutenberg editor in Wordpress allowing our content team to customize their articles.</p>
+            <p>I serve as the frontend guild leader responsible for running monthly guild meetings and syncing the design team with engineering teams.</p>
+          </ExpandableTextContainer>
+        </MaxWidthContainer>
+      </FullHeightFlexContainer>
+      <FullHeightFlexContainer sectionIndex={5} displayScrollButton={false} displayBackToTop={true} id="previous-job-experience">
+        <MaxWidthContainer>
+          <h2>before Leafly, I worked at</h2>
+          <ExpandableTextContainer
+            moreText="there's more?!"
+            lessText="great experience!"
+            ariaLabel="toggle visibility of 'previous jobs' text"
+          >
+            <List>
+              <ListItem>
+                <LogoTitle>
+                  <CompanyLogo src={process.env.PUBLIC_URL + '/logos/spreetail.png'} alt="Spreetail" />
+                  <div>
+                    <h3>Senior Frontend Engineer</h3>
+                    <DateSpan>January 2019 - July 2019</DateSpan>
+                  </div>
+                </LogoTitle>
+                <p>Served as engineering lead for marketing and content site wide using Strapi as a CMS and integrating it into our React, Next.js and Typescript project. I also converted our existing SCSS styles to styled components and created a robust image sizing solution with Imgix.</p>
+              </ListItem>
+              <ListItem>
+                <LogoTitle>
+                  <CompanyLogo src={process.env.PUBLIC_URL + '/logos/tastemade.png'} alt="Tastemade" />
+                  <div>
+                    <h3>Frontend Engineer</h3>
+                    <DateSpan>June 2016 - December 2018</DateSpan>
+                  </div>
+                </LogoTitle>
+                <p>Working directly with content creators and designers, I helped create a unique, interactive experience on Tastemade’s flagship web site. I implemented several user-centric optimizations including saving recipes and subscribing to the company’s premium offering.</p>
+              </ListItem>
+              <ListItem>
+                <LogoTitle>
+                  <CompanyLogo src={process.env.PUBLIC_URL + '/logos/gpo.svg'} alt="GPO, Inc." />
+                  <div>
+                    <h3>Frontend Engineer</h3>
+                    <DateSpan>September 2015 - June 2016</DateSpan>
+                  </div>
+                </LogoTitle>
+              </ListItem>
+              <ListItem>
+                <LogoTitle>
+                  <CompanyLogo src={process.env.PUBLIC_URL + '/logos/mm.png'} alt="Mutual Mobile" />
+                  <div>
+                    <h3>Frontend Engineer</h3>
+                    <DateSpan>Jul 2012 – Aug 2015</DateSpan>
+                  </div>
+                </LogoTitle>
+              </ListItem>
+            </List>
+          </ExpandableTextContainer>
         </MaxWidthContainer>
       </FullHeightFlexContainer>
     </main>
@@ -224,7 +212,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   margin-bottom: 40px;
 `
-const Date = styled.span`
+const DateSpan = styled.span`
   font-size: 14px;
   color: #555;
   line-height: 1;
