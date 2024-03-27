@@ -6,13 +6,12 @@ import ExpandableTextContainer from './components/ExpandableContainer';
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  
   useEffect(() => {
     setTimeout(() => {
       setIsLoaded(true);
     }, 200)
   }, []);
-
-  const year = new Date().getFullYear() - 2012;
 
   return (
     <main>
@@ -29,32 +28,42 @@ const App = () => {
             ariaLabel="Show more of the 'about me' text"
             initialHeight={350}
           >
-            <p>After graduating from Ohio University with a bachelors degree in Visual Communication, I’ve spent my {year} year career in Austin, Texas working for a handful of tech companies. Throughout the time I’ve spent at each company, I’ve encountered a variety of technologies, methodologies and colleagues who have helped educate and shape me into the developer I am today.</p>
-            <p>My main interest is in the frontend, the visual part of any app, as I gravitate more towards what I can see and interact with in my day to day life. Seeing an app or website come to life as I code motivates me and I feed off of the enjoyment the products I develop bring to end users. I strongly believe in clean, tightly written, documented and tested code. I also believe in the ecosystem in which a product is developed; the project and product managers, designers and QA engineers as well as the developers are integral in the success of any product.</p>
-            <p>I also enjoy modernizing code bases and optimizing for performance improvements. It is immensely satisfying to untangle old code and put it back together in a consistent, readable way with a lower learning curve for developers, in a more efficient development environment. At every job I've worked at, I've encountered long ignored code bases, still actively developed in, that slow developers to a crawl and invite poorly performing code and sometimes security issues to run rampant. Its why I consistently stress to colleagues that an up to date codebase is an efficient and more performant codebase.</p>
+            <p>I am a seasoned Senior Software Engineer with a strong background in frontend development, specializing in optimizing performance, enhancing user experiences, and empowering teams through innovative solutions. Over my career, I have demonstrated expertise in various technologies including Next.js, React, and various CMS platforms. I am proficient in utilizing tools such as Datadog and Google Search Console to monitor and improve performance metrics, and have a proven track record of leading teams to successfully implement complex projects. My experience spans across diverse industries including e-commerce, media, and technology consulting, where I have consistently delivered high-quality solutions to meet business objectives.</p>
+            <ul>
+              <li>Performance Optimization: Developed proactive strategies and implemented solutions to enhance frontend performance, including reducing page size by 50% and decreasing latency by over 50% on high-traffic pages.</li>
+              <li>Team Leadership: Led and managed teams to successfully plan and implement projects such as migrating micro-frontends into unified repositories, streamlining development processes and enhancing collaboration.</li>
+              <li>Technical Expertise: Proficient in a wide range of technologies including Next.js, React, GraphQL, and various CMS platforms such as Strapi and Directus, with experience in building and launching modern web platforms using tools like Vercel and Google Cloud Platform.</li>
+              <li>Innovation and Problem Solving: Demonstrated ability to architect solutions for A/B experimentation, bug resolution processes, and CMS integrations, improving efficiency and driving business outcomes.</li>
+              <li>Client Engagement: Worked with a diverse range of clients including Spreetail, Tastemade, and Mutual Mobile, delivering tailored solutions to meet their specific needs and requirements.</li>
+            </ul>
+            <p>With a passion for staying up-to-date with the latest technologies and trends in the industry, I am committed to delivering innovative solutions that drive business success and exceed user expectations.</p>
           </ExpandableTextContainer>
         </MaxWidthContainer>
       </FullHeightFlexContainer>
       <FullHeightFlexContainer sectionIndex={3} id="skills">
         <MaxWidthContainer>
-          <h2>What I know</h2>
+          <h2>Skills</h2>
           <Table>
             <Row>
               <Column>
                 <h3>Languages</h3>
-                <p>Typscript, Javascript, HTML, CSS</p>
+                <p>TypeScript, JavaScript, HTML, CSS, PHP, Ruby</p>
               </Column>
               <Column>
-                <h3>Frameworks</h3>
-                <p>React.js, Next.js, Redux, Tailwind CSS, Styled Components, Node.js, Jest, Wordpress, GraphQL</p>
+                <h3>Frameworks & libraries</h3>
+                <p>Next.js, React, Node.js, Redux, Tailwind CSS, ESlint, Jest, Cypress, Testing Library, Google Maps, Storybook, GraphQL PostCSS, Styled Components, Ruby on Rails</p>
               </Column>
               <Column>
-                <h3>Tools</h3>
-                <p>Git, Storybook, Yarn, NPM, Jest Axe, Pa11y, Google Analytics, Split.io, Google Tag Manager, Datadog, Rollbar, Calibre</p>
+                <h3>Platforms</h3>
+                <p>Datadog, Imgix, Split.io, Docker, Google Analytics, AWS, Google Cloud Platform</p>
               </Column>
               <Column>
                 <h3>Concepts</h3>
-                <p>Responsive web development, Agile, REST, Web Content Accessibility Guidelines (WCAG), Core Web Vitals</p>
+                <p>Core Web Vitals, A/B Testing, SEO, Accessibility (WCAG), Responsive web dev</p>
+              </Column>
+              <Column>
+                <h3>Content Management</h3>
+                <p>Wordpress, Directus, Strapi</p>
               </Column>
             </Row>
           </Table>
@@ -68,6 +77,8 @@ const App = () => {
             lessText="impressive!"
             ariaLabel="Show more of the 'current job' text"
           >
+            <List>
+              <ListItem>
             <LogoTitle>
               <CompanyLogo src={process.env.PUBLIC_URL + '/logos/leafly.png'} alt="Leafly" />
               <div>
@@ -75,17 +86,37 @@ const App = () => {
                 <DateSpan>August 2019 - Present</DateSpan>
               </div>
             </LogoTitle>
-            <p>My primary focus at Leafly has been optimization of consumer facing products, whether that be performance optimization, code optimization, or optimization of features to provide users with the best possible experience for discovering and legally purchasing cannabis.</p>
-            <p>As a subject matter expert for web performance, I helped the engineering org define and maintain performance metrics. On multiple occasions I was tasked with improving the Core Web Vitals (CWV) metrics in multiple areas of the site. I doubled lighthouse and CWV scores on the home, strain and news pages (~60% of total site traffic) by creating a custom image component built to harness the powers of Imgix, reducing bundle sizes by nearly 50% by reverse engineering areas of our code base and refactoring pages to optimize load times with Next.js dynamic components.</p>
-            <p>I oversaw the migration of three separate projects where we converted javascript to typescript, removed legacy code and optimized the migrated pages for the most recent React.js and Next.js builds. One migration was a complete rebuild of a Wordpress-hosted part of the site, which involved converting our Wordpress install to headless mode, rewriting all PHP templates in typescript and optimizing the Wordpress REST API wider use.</p>
-            <p>I’ve also led the implementation of several consumer-facing features. They include setting up and using Directus CMS to enable marketing and SEO to quickly update sections of the site, a completely customizable home page using Directs CMS, a comparison shopping component that allows users to quickly see the closest and cheapest ways to purchase cannabis, a strain quiz component that helps users find the strain of cannabis that most fits their needs, and several React components for the Gutenberg editor in Wordpress allowing our content team to customize their articles.</p>
-            <p>I serve as the frontend guild leader responsible for running monthly guild meetings and syncing the design team with engineering teams.</p>
+            <ul>
+              <li>Developed a proactive strategy utilizing Datadog and Google Search Console to monitor and quickly resolve Core Web Vitals regressions, ensuring consistently optimal frontend performance</li>
+              <li>Led a team of four engineers to plan and implement a headless frontend solution in Next.js for a large-scale WordPress instance managing thousands of posts and pages</li>
+              <li>Reduced overall page size by 50% by building a custom React image component that optimizes images based on responsive breakpoints using browser APIs and Imgix CDN</li>
+              <li>Improved A/B experimentation capabilities by architecting a testing solution leveraging Split.IO for both server-side and client-side applications</li>
+              <li>Established bug resolution processes, cutting turnaround time to one day through process improvements, advanced error logging techniques, and Datadog monitoring</li>
+              <li>Decreased latency over 50% on high traffic pages by analyzing server traces via Datadog and refactoring data fetching for a more balanced and performant approach</li>
+              <li>Empowered marketing and SEO teams through the implementation of Directus CMS, encouraging autonomy and customization without developer intervention</li>
+              <li>Led the migration of four micro-frontends into a unified Next.js monorepo, streamlining development processes and enhancing collaboration</li>
+            </ul>
+              </ListItem>
+              <ListItem>
+                <LogoTitle>
+                  <CompanyLogo src={process.env.PUBLIC_URL + '/logos/zuplo.png'} alt="Zuplo" />
+                  <div>
+                    <h3>Contract Engineer</h3>
+                    <DateSpan>February 2023 - August 2023</DateSpan>
+                  </div>
+                </LogoTitle>
+                <ul>
+                  <li>Rewrote zuplo.com, originally built on Webflow, into a modern platform using Next.js 14, powered by TypeScript and styled with Tailwind CSS, then launched in Vercel</li>
+                  <li>Built ratemyopenapi.com from the ground up using Next.js 14, TypeScript, Tailwind CSS, and Google Cloud Platform, deploying it with Vercel</li>
+                </ul>
+              </ListItem>
+            </List>
           </ExpandableTextContainer>
         </MaxWidthContainer>
       </FullHeightFlexContainer>
       <FullHeightFlexContainer sectionIndex={5} displayScrollButton={false} displayBackToTop={true} id="previous-job-experience">
         <MaxWidthContainer>
-          <h2>before Leafly, I worked at</h2>
+          <h2>Past experience</h2>
           <ExpandableTextContainer
             moreText="there's more?!"
             lessText="great experience!"
@@ -100,7 +131,9 @@ const App = () => {
                     <DateSpan>January 2019 - July 2019</DateSpan>
                   </div>
                 </LogoTitle>
-                <p>Served as engineering lead for marketing and content site wide using Strapi as a CMS and integrating it into our React, Next.js and Typescript project. I also converted our existing SCSS styles to styled components and created a robust image sizing solution with Imgix.</p>
+                <ul>
+                  <li>Integrated Strapi CMS into Next.js applications using GraphQL, enhancing marketing and SEO initiatives with streamlined content management capabilities</li>
+                </ul>
               </ListItem>
               <ListItem>
                 <LogoTitle>
@@ -110,7 +143,9 @@ const App = () => {
                     <DateSpan>June 2016 - December 2018</DateSpan>
                   </div>
                 </LogoTitle>
-                <p>Working directly with content creators and designers, I helped create a unique, interactive experience on Tastemade’s flagship web site. I implemented several user-centric optimizations including saving recipes and subscribing to the company’s premium offering.</p>
+                <ul>
+                  <li>Created user experiences by developing and implementing features such as recipe saving and subscription sign-ups using Next.js, React and Styled Components</li>
+                </ul>
               </ListItem>
               <ListItem>
                 <LogoTitle>
@@ -120,6 +155,9 @@ const App = () => {
                     <DateSpan>September 2015 - June 2016</DateSpan>
                   </div>
                 </LogoTitle>
+                <ul>
+                  <li>Refined a system to generate static, location-specific HTML landing pages for clients like Dominos Pizza and Discount Tire using a custom Node.js html generator and PostCSS</li>
+                </ul>
               </ListItem>
               <ListItem>
                 <LogoTitle>
@@ -129,6 +167,9 @@ const App = () => {
                     <DateSpan>Jul 2012 – Aug 2015</DateSpan>
                   </div>
                 </LogoTitle>
+                <ul>
+                  <li>Implemented React and Angular UI components for clients including AGCO and Wells Fargo</li>
+                </ul>
               </ListItem>
             </List>
           </ExpandableTextContainer>
@@ -159,7 +200,7 @@ const IntroParagraph = styled.p`
     transform: 1;
   }
   @media (min-width: 768px) {
-    font-size: 40px;
+    font-size: 38px;
   }
 `;
 
@@ -210,7 +251,7 @@ const List = styled.ul`
   margin: 0;
 `;
 const ListItem = styled.li`
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 `
 const DateSpan = styled.span`
   font-size: 14px;
@@ -220,12 +261,9 @@ const DateSpan = styled.span`
   display: block;
 `
 const CompanyLogo = styled.img`
-  max-height: 50px;
+  max-height: 40px;
   margin-bottom: 12px;
-  max-width: 100px;
-  @media (min-width: 768px) {
-    max-width: 150px;
-  }
+  max-width: 80px;
 `
 const LogoTitle = styled.div`
   margin-bottom: 8px;
@@ -265,7 +303,7 @@ const Column = styled.div`
     &:nth-of-type(2n) {
       padding-left: 8px;
     }
-    &:nth-child(n+3) {
+    &:nth-child(n+4) {
       margin-bottom: 0;
     }
   }

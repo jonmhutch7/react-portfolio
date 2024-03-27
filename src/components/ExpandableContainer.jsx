@@ -46,9 +46,6 @@ const ExpandableContainer = styled.div`
 	overflow-y: hidden;
 	transition: max-height 0.3s ease;
   max-height: ${props => props.isOpen ? '1540px' : `${props.initialHeight}px`};
-	*:last-child {
-		margin-bottom: 30px;
-	}
 `
 const Button = styled.button`
 	position: absolute;
