@@ -13,6 +13,8 @@ const App = () => {
     }, 200)
   }, []);
 
+  const year = new Date().getFullYear() - 2013;
+
   return (
     <main>
       <Header />
@@ -28,15 +30,8 @@ const App = () => {
             ariaLabel="Show more of the 'about me' text"
             initialHeight={350}
           >
-            <p>I am a seasoned Senior Software Engineer with a strong background in frontend development, specializing in optimizing performance, enhancing user experiences, and empowering teams through innovative solutions. Over my career, I have demonstrated expertise in various technologies including Next.js, React, and various CMS platforms. I am proficient in utilizing tools such as Datadog and Google Search Console to monitor and improve performance metrics, and have a proven track record of leading teams to successfully implement complex projects. My experience spans across diverse industries including e-commerce, media, and technology consulting, where I have consistently delivered high-quality solutions to meet business objectives.</p>
-            <ul>
-              <li>Performance Optimization: Developed proactive strategies and implemented solutions to enhance frontend performance, including reducing page size by 50% and decreasing latency by over 50% on high-traffic pages.</li>
-              <li>Team Leadership: Led and managed teams to successfully plan and implement projects such as migrating micro-frontends into unified repositories, streamlining development processes and enhancing collaboration.</li>
-              <li>Technical Expertise: Proficient in a wide range of technologies including Next.js, React, GraphQL, and various CMS platforms such as Strapi and Directus, with experience in building and launching modern web platforms using tools like Vercel and Google Cloud Platform.</li>
-              <li>Innovation and Problem Solving: Demonstrated ability to architect solutions for A/B experimentation, bug resolution processes, and CMS integrations, improving efficiency and driving business outcomes.</li>
-              <li>Client Engagement: Worked with a diverse range of clients including Spreetail, Tastemade, and Mutual Mobile, delivering tailored solutions to meet their specific needs and requirements.</li>
-            </ul>
-            <p>With a passion for staying up-to-date with the latest technologies and trends in the industry, I am committed to delivering innovative solutions that drive business success and exceed user expectations.</p>
+            <p>As a seasoned Senior Frontend Developer with over {year} years of industry experience, I bring a wealth of expertise in crafting exceptional web solutions. Proficient in a diverse array of technologies, including TypeScript, HTML, and CSS, I excel in leveraging frontend frameworks such as React, Next.js, and Redux to build dynamic and responsive user interfaces. My adeptness extends to the utilization of Tailwind CSS for streamlined styling and Jest and Cypress for robust testing, ensuring the reliability and performance of every project.</p>
+            <p>My specialization in web performance optimization and core web vitals underscores my commitment to delivering seamless user experiences. I take pride in my ability to produce clean, well-organized code that not only meets but exceeds industry standards. Meticulously following designs and project plans provided by designers and project managers, I am adept at collaborating within multidisciplinary teams to achieve project goals efficiently. Whether working independently or in tandem with colleagues, I consistently demonstrate adaptability, initiative, and a passion for driving excellence in frontend development.</p>
           </ExpandableTextContainer>
         </MaxWidthContainer>
       </FullHeightFlexContainer>
@@ -87,14 +82,13 @@ const App = () => {
               </div>
             </LogoTitle>
             <ul>
-              <li>Developed a proactive strategy utilizing Datadog and Google Search Console to monitor and quickly resolve Core Web Vitals regressions, ensuring consistently optimal frontend performance</li>
-              <li>Led a team of four engineers to plan and implement a headless frontend solution in Next.js for a large-scale WordPress instance managing thousands of posts and pages</li>
-              <li>Reduced overall page size by 50% by building a custom React image component that optimizes images based on responsive breakpoints using browser APIs and Imgix CDN</li>
-              <li>Improved A/B experimentation capabilities by architecting a testing solution leveraging Split.IO for both server-side and client-side applications</li>
-              <li>Established bug resolution processes, cutting turnaround time to one day through process improvements, advanced error logging techniques, and Datadog monitoring</li>
-              <li>Decreased latency over 50% on high traffic pages by analyzing server traces via Datadog and refactoring data fetching for a more balanced and performant approach</li>
-              <li>Empowered marketing and SEO teams through the implementation of Directus CMS, encouraging autonomy and customization without developer intervention</li>
-              <li>Led the migration of four micro-frontends into a unified Next.js monorepo, streamlining development processes and enhancing collaboration</li>
+              <li>Championed web performance as the subject matter expert in Core Web Vitals by educating colleagues on best practices, developing processes to monitor, diagnose and fix regressions and architecting solutions to maintain performance in areas like data-fetching and image optimization</li>
+              <li>Led a team to build a headless frontend solution using Next.js for a WordPress instance managing thousands of posts and pages, reducing development time and barrier of entry for WordPress development</li>
+              <li>Improved A/B testing capabilities by architecting a solution leveraging Split.IO for both server-side and client-side Next.js usage, resulting in increased experiment confidence</li>
+              <li>Headed the migration and refactor of four JavaScript micro-frontends, which account for 60% of site traffic, into a unified Next.js TypeScript monorepo, streamlining development processes</li>
+              <li>Established bug resolution protocols that reduced turnaround time to one day through process improvements, advanced error logging techniques, and Datadog monitoring</li>
+              <li>Implemented Directus CMS site-wide, empowering marketing and SEO teams to customize and iterate on content without developer intervention</li>
+              <li>Contributed over 8,000 times to repositories in Github including pull requests, commits and code reviews</li>
             </ul>
               </ListItem>
               <ListItem>
